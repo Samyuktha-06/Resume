@@ -40,13 +40,14 @@
 
     .contact {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+  justify-content: center;     
+  align-items: center;          
+  flex-wrap: wrap;              
+  gap: 1rem;                    
   margin-top: 1rem;
   font-size: 0.95rem;
-  color: white;
 }
+
 
 .contact-left,
 .contact-right {
@@ -56,6 +57,38 @@
   display: flex;
   align-items: center;
 }
+.contact-left a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.zoom-hover {
+  background-color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.zoom-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.zoom-hover:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2) inset;
+}
+
+
+
+
+
 .contact div {
   color: #ffffff;
   padding: 0.5rem 1rem;
@@ -150,14 +183,21 @@
 
     @media (max-width: 768px) {
   .profile {
-    flex-direction: row; /* DO NOT change to column */
-    align-items: flex-start;
+    flex-direction: column; /* Change from row to column */
+    align-items: center;
+    text-align: center;
   }
 
   .profile img {
     width: 120px;
     height: 120px;
   }
+
+  .profile-text {
+    padding-top: 1rem;
+  }
+}
+
 }
 
   
@@ -169,12 +209,16 @@
       <h1>Samyuktha Sundaramoorthy</h1>
       <p>Computer Science Engineering Student</p>
       <div class="contact">
-        <div class="contact-left">
-          <svg width="16" height="16" fill="white" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
-            <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24c1.12.37 2.33.57 3.54.57a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.918 17.918 0 0 1 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.21.2 2.42.57 3.54a1 1 0 0 1-.24 1.05l-2.2 2.2z"/>
-          </svg>
-          +91 0000000000
-        </div>
+       <div class="contact-left zoom-hover">
+  <svg width="16" height="16" fill="white" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
+    <path d="M4.98 3.5C3.33 3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98 2.98-1.33 2.98-2.98S6.63 3.5 4.98 3.5zM2 21h6v-9H2v9zm7.5-9h5.5v1.3h.1c.77-1.4 2.66-2.3 4.4-2.3 4.7 0 5.6 3.1 5.6 7.1V21h-6v-5.4c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V21h-5.5v-9z"/>
+  </svg>
+  <a href="https://www.linkedin.com/in/samyuktha-sundaramoorthy-85b2262a3" target="_blank">
+    Samyuktha LinkedIn Profile
+  </a>
+</div>
+
+
         <div class="contact-right">
           <svg width="16" height="16" fill="white" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
             <path fill="white" d="M4 4h16c1.1 0 2 .9 2 2v0.01L12 13 2 6.01V6c0-1.1.9-2 2-2zm0 4.236V18h16V8.236l-8 5.264-8-5.264z"/>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samyuktha's Resume</title>
+  <style>
+    :root {
+      --primary: #277381;
+      --secondary: #ffffff;
+      --accent: #a4cfcd;
+      --text: #3b3b3b;
+      --bg: #ddf1ed;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--secondary);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: var(--bg);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.contact-left,
+.contact-right {
+  
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.contact div {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile {
+  display: flex;
+  flex-direction: row; /* ensure it's explicitly set */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--accent);
+  border-bottom: 1px solid #eee;
+}
+
+.profile-text {
+  flex: 1;
+  padding: 1rem; /* Move padding here instead of :hover */
+  transition: transform 0.6s ease, box-shadow 0.4s ease;
+  will-change: transform, box-shadow;
+}
+
+.profile-text:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+
+.profile-text:hover {
+  transform: scale(1.03);
+  padding: 1rem;        /* This changes content width and causes line wrap shift */
+  border-radius: 12px;
+}
+
+
+    .profile img {
+      width: 160px;
+      height: 160px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 4px solid var(--primary);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      align-self: center;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05);
+    }
+
+    .section {
+  background: white;
+  margin: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease-in-out;
+  will-change: transform, box-shadow;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.section.visible:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+    .section h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+  .profile {
+    flex-direction: row; /* DO NOT change to column */
+    align-items: flex-start;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Samyuktha Sundaramoorthy</h1>
+      <p>Computer Science Engineering Student</p>
+      <div class="contact">
+        <div class="contact-left">
+          <svg width="16" height="16" fill="white" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
+            <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24c1.12.37 2.33.57 3.54.57a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.918 17.918 0 0 1 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.21.2 2.42.57 3.54a1 1 0 0 1-.24 1.05l-2.2 2.2z"/>
+          </svg>
+          +91 0000000000
+        </div>
+        <div class="contact-right">
+          <svg width="16" height="16" fill="white" viewBox="0 0 24 24" style="vertical-align: middle; margin-right: 6px;">
+            <path fill="white" d="M4 4h16c1.1 0 2 .9 2 2v0.01L12 13 2 6.01V6c0-1.1.9-2 2-2zm0 4.236V18h16V8.236l-8 5.264-8-5.264z"/>
+          </svg>
+          samyukthasundaramoorthy@gmail.com
+        </div>
+      </div>
+    </div>
+
+    <div class="profile">
+      <img src="profile.jpg" alt="Samyuktha's Photo" />
+      <div class="profile-text">
+        <p>I am a dedicated Computer Science Engineering student proficient in Java and C, currently exploring AI and web development. I’ve built data analysis dashboards, front-end websites, and even a chatbot that can read PDFs using Mistral AI and Groq Cloud. Passionate about tech and teamwork.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Computer Science Engineering</strong><br />
+      Dr. Mahalingam College of Engineering and Technology<br />
+      2023 - 2027</p>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Designed front-end websites using HTML and CSS</li>
+        <li>Recreated Netflix sign-up page</li>
+        <li>Built a shopping site</li>
+        <li>Created Excel dashboard for road accident data</li>
+        <li>Interactive PDF chatbot using Mistral AI + Colab</li>
+        <li>Designed brochures and content in Canva</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>Java, C, HTML, CSS, Python</li>
+        <li>Excel, Canva, Colab</li>
+        <li>Communication, Teamwork, Time Management</li>
+        <li>Languages: English, Tamil</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Certifications & Achievements</h2>
+      <ul>
+        <li>Cambridge B1 – Lingua Skill</li>
+        <li>NPTEL – Problem Solving in C, Leadership</li>
+        <li>AI Workshop Participation</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Activities</h2>
+      <ul>
+        <li>Event coordinator – CSE department association</li>
+        <li>Organized coding contests, symposiums, and workshops</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    window.onload = () => {
+      const sections = document.querySelectorAll('.section');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          } else {
+            entry.target.classList.remove('visible');
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    };
+  </script>
+</body>
+</html>
